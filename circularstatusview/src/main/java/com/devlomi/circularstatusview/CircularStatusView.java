@@ -92,7 +92,7 @@ public class CircularStatusView extends View {
             float endSpacing = getSpacing();
             if (i == 0) {
                 startSpacing = 0;
-                endSpacing = 0;
+                endSpacing = getSpacing() / 2;
             } else if (i == (portionsCount-1)) {
                 endSpacing = 0;
             }
