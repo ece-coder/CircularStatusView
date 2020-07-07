@@ -19,7 +19,7 @@ public class CircularStatusView extends View {
     private static final int DEFAULT_PORTION_SPACING = 5;
     private static final int DEFAULT_COLOR = Color.parseColor("#D81B60");
     private static final float DEFAULT_PORTIONS_COUNT = 1;
-    private static final float START_DEGREE = -90;
+    private static final float START_DEGREE = 90;
 
     private float radius;
     private float portionWidth = DEFAULT_PORTION_WIDTH;
@@ -80,7 +80,7 @@ public class CircularStatusView extends View {
 
         final RectF oval = getOval(radius, center_x, center_y);
 
-        float degree = 360 / portionsCount;
+        float degree = 315 / portionsCount;
         float percent = 100 / portionsCount;
 
 
