@@ -19,7 +19,7 @@ public class CircularStatusView extends View {
     private static final int DEFAULT_PORTION_SPACING = 5;
     private static final int DEFAULT_COLOR = Color.parseColor("#D81B60");
     private static final float DEFAULT_PORTIONS_COUNT = 1;
-    private static final float START_DEGREE = 90;
+    private static final float START_DEGREE = -90;
 
     private float radius;
     private float portionWidth = DEFAULT_PORTION_WIDTH;
@@ -87,7 +87,12 @@ public class CircularStatusView extends View {
         for (int i = 0; i < portionsCount; i++) {
             paint.setColor(getPaintColorForIndex(i));
             float startAngle = START_DEGREE + (degree * i);
-            canvas.drawArc(oval, (getSpacing() / 2) + startAngle, getProgressAngle(percent) - getSpacing(), false, paint);
+
+            float spacing = getSpacing();
+            if ((portionsCount == 0) || (i == (portionsCount-1))) {
+                spacing = 0;
+            }
+            canvas.drawArc(oval, (spacing / 2) + startAngle, getProgressAngle(percent) - spacing, false, paint);
         }
 
 
