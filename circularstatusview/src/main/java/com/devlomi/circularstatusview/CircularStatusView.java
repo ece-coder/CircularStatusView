@@ -19,7 +19,7 @@ public class CircularStatusView extends View {
     private static final int DEFAULT_PORTION_SPACING = 5;
     private static final int DEFAULT_COLOR = Color.parseColor("#D81B60");
     private static final float DEFAULT_PORTIONS_COUNT = 1;
-    private static final float START_DEGREE = -45;
+    private static final float START_DEGREE = -40;
 
     private float radius;
     private float portionWidth = DEFAULT_PORTION_WIDTH;
@@ -92,6 +92,7 @@ public class CircularStatusView extends View {
             float endSpacing = getSpacing();
             if (i == 0) {
                 startSpacing = 0;
+                endSpacing = 0;
             } else if (i == (portionsCount-1)) {
                 endSpacing = 0;
             }
