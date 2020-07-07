@@ -144,7 +144,7 @@ public class CircularStatusView extends View {
     }
 
     private float getProgressAngle(float percent) {
-        return percent / (float) 100 * 360;
+        return percent / (float) 100 * 315;
     }
 
     public void setPortionsCount(int portionsCount) {
